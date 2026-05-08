@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 
 //9 - Importando imagem do Assets
 import ibirapuera from './assets/Ibirapuera.jpg';
@@ -25,8 +26,31 @@ const carros = [
   {id: 1, marca: "Citroen", cor: "vermelho", km: 100000},
 ];
 
+//16 - Importando Fragmento
+import Fragmento from './componentes/Fragmento';
+
+//17 - Importando Children Prop
+import Container from './componentes/Container';
+
+//18 - Importando Função em Prop
+import FuncaoProp from './componentes/FuncaoProp';
+
+//19 - State Lift
+import Mensagem from './componentes/Mensagem';
+import MudarMensagem from './componentes/MudarMensagem';
 
 function App() {
+
+  function showMessage(){
+    console.log("Evento do componente principal");
+  }
+
+  //19 - State Lift
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
 
   return (
    <div className="AppAvancado">
@@ -59,6 +83,21 @@ function App() {
     {carros.map((carros) => (
       <DetalherdoCarro key={carros.id} marca={carros.marca} cor={carros.cor} km={carros.km} />
     ))}
+
+    {/* 16 - Importando Fragmento */}
+    <Fragmento />
+
+    {/* 17 - Importando Children Prop */}
+    <Container>
+      <p>Exibindo Children</p>
+    </Container>
+
+    {/* 18 - Importando Função em Prop */}
+    <FuncaoProp minhaFuncao={showMessage} />
+
+    {/* 19 - State Lift */}
+    <Mensagem msg={message} />
+    <MudarMensagem handleMessage={handleMessage} />
 
 
    </div>

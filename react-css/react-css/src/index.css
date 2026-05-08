@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+}
+
+body{
+  padding-bottom: 500px;
+}
+
+h1{
+  color: red;
+}
+
+/* Classe dinâmica */
+.brown-titulo{
+  font-size: 50px;
+  color: brown;
+  background-color: greenyellow;
+}
