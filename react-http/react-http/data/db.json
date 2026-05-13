@@ -1,0 +1,95 @@
+{
+  "products": [
+    {
+      "name": "capa de chuva",
+      "price": "10.50",
+      "id": "5"
+    },
+    {
+      "name": "teclado",
+      "price": "79.90",
+      "id": "6"
+    },
+    {
+      "name": "cadeira",
+      "price": "499.99",
+      "id": "7"
+    },
+    {
+      "name": "notebook",
+      "price": "3999,99",
+      "id": "ZL7bVIT83NU"
+    },
+    {
+      "name": "mouse",
+      "price": "39,99",
+      "id": "GRqUAlZ2T3U"
+    },
+    {
+      "name": "teclado",
+      "price": "299,99",
+      "id": "fod_Ewu3Ji0"
+    },
+    {
+      "name": "Monitor",
+      "price": "899,99",
+      "id": "g3ysI1OTZ3s"
+    },
+    {
+      "name": "tablet",
+      "price": "1599,99",
+      "id": "hObBvgKTdTU"
+    },
+    {
+      "name": "processador",
+      "price": "600",
+      "id": "PVZbQL92mzg"
+    },
+    {
+      "name": "mousepad",
+      "price": "40",
+      "id": "gPI_6Cps3SQ"
+    },
+    {
+      "name": "mouse branco",
+      "price": "53,99",
+      "id": "COMzd5G5UFg"
+    },
+    {
+      "name": "ps5",
+      "price": "30000",
+      "id": "3zy3BkouHzY"
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": "K2LszygO9CA"
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": "BT_ROgpYOwI"
+    },
+    {
+      "name": "placa mãe",
+      "price": "599,99",
+      "id": "VsqKRROlS6I"
+    },
+    {
+      "name": "placa mãe",
+      "price": "599,99",
+      "id": "yC2LBG-EPCA"
+    },
+    {
+      "name": "memoria ram",
+      "price": "350",
+      "id": "mA-xla3QdWE"
+    },
+    {
+      "name": "memoria ram",
+      "price": "350",
+      "id": "BGePWClkd1M"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
