@@ -89,6 +89,16 @@
       "name": "memoria ram",
       "price": "350",
       "id": "BGePWClkd1M"
+    },
+    {
+      "name": "teclado mecanico",
+      "price": "599,99",
+      "id": "1zjEWvbjSCo"
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": "fJmU4bb7cys"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

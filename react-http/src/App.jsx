@@ -14,7 +14,7 @@ function App() {
 // const [products, setProducts] = useState([]);
 
   //custom hook
-  const { data: items, httpConfig, Loading } = useFetch(url);
+  const { data: items, httpConfig, Loading, error } = useFetch(url);
 
 
 
@@ -78,6 +78,9 @@ function App() {
 
       {/* Loading */}
       {Loading && <p>Carregando...</p>}
+
+      {/* Tratando o erro */}
+      {error && <p>{error}</p>}
 
        <ul className="read-the-docs">
         {items && 
