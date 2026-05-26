@@ -1,0 +1,20 @@
+{
+    "products": [
+        {
+            "name": "capa de chuva",
+            "price": "50.50",
+            "id": "1"
+        },
+        {
+            "name": "teclado",
+            "price": "110",
+            "id": "2"
+        },
+        {
+            "name": "cadeira",
+            "price": "400",
+            "id": "3"
+        }
+
+    ]
+}
