@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ValidacaoDeCadastro from "./ValidacaoDeCadastro";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 const Cadastrar = () => {
@@ -9,6 +11,8 @@ const Cadastrar = () => {
         email: "",
         password: ""
     });
+
+    const navegacao = useNavigate();
 
     const [errors, setErrors] = useState({});
 
@@ -19,6 +23,14 @@ const Cadastrar = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         setErrors(ValidacaoDeCadastro(valores));
+
+        if(errors.name === "" && errors.email === "" && errors.password === "" ){
+            axios.post('http://localhost:7006/cadastrar', valores)
+            .then(res => {
+                navegacao("/");
+            })
+            .catch(err => console.log(err));
+        }
     }
 
   return (
