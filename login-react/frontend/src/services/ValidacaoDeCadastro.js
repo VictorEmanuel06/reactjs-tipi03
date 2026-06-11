@@ -25,7 +25,7 @@ function ValidacaoDeCadastro(valores){
         error.password = "O campo não pode estar vazio";
     }
     else if(!password_pattern.test(valores.password)){
-        error.password = "A senha tem que ter no mínimo 1 letra maiúscula, minúscula, número e símbolo, até 8 caracteres";
+        error.password = "A senha tem que ter no mínimo 1 letra maiúscula, minúscula, número e até 8 caracteres";
     }
     else {
         error.password = "";
