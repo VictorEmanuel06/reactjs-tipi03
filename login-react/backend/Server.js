@@ -4,7 +4,11 @@ import mysql from "mysql";
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+import db from "./db.js";
  
+dotenv.config();
+
 const app = express();
 app.use(cors({
     origin: ['http://localhost:3000'],
@@ -24,12 +28,6 @@ app.use(session({
     } // definindo as propriedades do cookie da sessão
 }));
  
-const db = mysql.createConnection({
-host: "localhost",
-user: "root",
-password: "",
-database: "cadastrarpessoas"
-});
  
 // CREATE
 app.post("/cadastrar", (req, res) => {
@@ -97,7 +95,7 @@ app.get("/logout", (req, res) => {
 })
 
  
-app.listen(7006, () => {
-    console.log("Conectado ao banco de dados");
+app.listen(process.env.PORT, () => {
+    console.log(`Servidor rodando na porta ${process.env.PORT}`);
 })
  

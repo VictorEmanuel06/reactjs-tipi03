@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ValidacaoDeCadastro from "../services/ValidacaoDeCadastro";
 import axios from "axios";
- 
+
  
 const Cadastrar = () => {
      const [valores, setValores] = useState({
