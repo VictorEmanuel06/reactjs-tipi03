@@ -32,8 +32,20 @@ const Home = () => {
       .catch(err => console.log(err));
     }
 
+
+
+    //nova função para ir para cadastrados
+    const irParaCadastrados = () => {
+      navegacao('/cadastrados');
+    }
+
   return (
     <div>
+
+     <button onClick={irParaCadastrados}>
+       Ver cadastrados
+     </button>
+
       <h1>Boas vindas ao nosso site {name}</h1>
       <button onClick={handleLogout}>Sair</button>
     </div>
