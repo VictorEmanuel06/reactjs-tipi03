@@ -22,12 +22,24 @@ const Editar = () => {
     .catch(err => console.log(err));
   }, [id]);
 
-  const handleChange = () => {
-
+  const handleChange = (e) => {
+    setDados({
+      ...dados,
+      [e.target.name]: e.target.value
+    });
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    axios.put(`http://localhost:7006/cadastrados/${id}`, dados, {
+      withCredentials: true
+    })
+    .then(res => {
+      alert(res.data.message);
+      navegacao("/cadastrados");
+    })
+    .catch(err => console.log(err));
   }
 
   //Função cancelar
