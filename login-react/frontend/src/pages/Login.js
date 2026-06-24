@@ -21,31 +21,35 @@ const Login = () => {
     axios.defaults.withCredentials = true;
    
     useEffect(() => {
-      axios.get('http://localhost:7006')
+      axios.get('http://localhost:7006', { withCredentials: true })
       .then( res => {
         if(res.data.valid){
           navegacao('/')
         }
       })
       .catch(err => console.log(err))
-    })
+    }, [navegacao]);
+
+
  
     const handleSubmit = async (event) => {
         event.preventDefault();
-        setErrors(ValidacaoDeLogin(valores));
+
+        const validacao = ValidacaoDeLogin(valores)
+        setErrors(validacao);
  
-        if(errors.email === "" && errors.password === ""){
-            axios.post('http://localhost:7006/login', valores)
+        if(validacao.email === "" && validacao.password === ""){
+            axios.post('http://localhost:7006/login', valores, {withCredentials: true })
             .then(res => {
-                if(res.data === "Login realizado com sucesso"){
-                    console.log(res);
-                    navegacao("/");
-                } else {
-                    alert("Registro inexistente");
-                    console.log(res);
-                }
+               navegacao("/");
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                if (err.response && err.response.status === 401) {
+                    alert("Email ou senha inválidos");
+                } else {
+                    console.log(err);
+                }
+            });
         }
     }
  
