@@ -12,7 +12,8 @@ const Editar = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:7006/cadastrados/${id}`)
+    axios.get(`http://localhost:7006/cadastrados/${id}`,
+      {withCredentials: true})
     .then(res => {
       setDados({
         name: res.data.name,
