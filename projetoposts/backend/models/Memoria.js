@@ -7,7 +7,7 @@ const MemoriaSchema = new Schema({
         type: String,
         require: true,
     },
-    text: {
+    description: {
         type: String,
         require: true,
     },
